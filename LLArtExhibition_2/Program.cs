@@ -4,14 +4,24 @@ using LLArtExhibition_2.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System.Net;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+/*≈‰÷√∂Àø⁄*/
+builder.Services.Configure<KestrelServerOptions>(option =>
+{
+    option.Listen(IPAddress.Any, int.Parse(builder.Configuration.GetSection("AppSettings:Port").Value));
+});
+
+/*≈‰÷√Policy*/
 builder.Services.Configure<CookiePolicyOptions>(options =>
 {
     // This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -19,6 +29,7 @@ builder.Services.Configure<CookiePolicyOptions>(options =>
     options.MinimumSameSitePolicy = SameSiteMode.None;
 });
 
+/*≈‰÷√Context*/
 builder.Services.AddDbContext<ApplicationDbContext>(options => {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
@@ -59,6 +70,7 @@ builder.Services.AddAuthorization(options =>
     });
 });*/
 
+/*Service“¿¿µ◊¢»Î*/
 builder.Services.AddScoped<IArtService, ArtService>();
 
 var app = builder.Build();
@@ -72,6 +84,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+/*—È÷§*/
 app.UseAuthorization();
 
 app.MapControllerRoute(

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\16202\\source\\repos\\LLArtExhibition_2\\LLArtExhibition_2\\LLArtExhibition_2.csproj": {}
+    "D:\\project\\LLArtExhibition_2\\LLArtExhibition_2\\LLArtExhibition_2.csproj": {}
   },
   "projects": {
-    "D:\\Users\\16202\\source\\repos\\LLArtExhibition_2\\LLArtExhibition_2\\LLArtExhibition_2.csproj": {
+    "D:\\project\\LLArtExhibition_2\\LLArtExhibition_2\\LLArtExhibition_2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\16202\\source\\repos\\LLArtExhibition_2\\LLArtExhibition_2\\LLArtExhibition_2.csproj",
+        "projectUniqueName": "D:\\project\\LLArtExhibition_2\\LLArtExhibition_2\\LLArtExhibition_2.csproj",
         "projectName": "LLArtExhibition_2",
-        "projectPath": "D:\\Users\\16202\\source\\repos\\LLArtExhibition_2\\LLArtExhibition_2\\LLArtExhibition_2.csproj",
+        "projectPath": "D:\\project\\LLArtExhibition_2\\LLArtExhibition_2\\LLArtExhibition_2.csproj",
         "packagesPath": "C:\\Users\\16202\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\16202\\source\\repos\\LLArtExhibition_2\\LLArtExhibition_2\\obj\\",
+        "outputPath": "D:\\project\\LLArtExhibition_2\\LLArtExhibition_2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

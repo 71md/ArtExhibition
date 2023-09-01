@@ -1,0 +1,46 @@
+﻿@model ArtViewModel
+@{
+    ViewBag.Title = "创建画作";
+}
+
+<form method="post">
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label" asp-for="Title">作品</label>
+        <div class="col-sm-10">
+            <input   asp-for="Title" />
+            <span class="invalid" asp-validation-for="Title"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label" asp-for="Author">作者</label>
+        <div class="col-sm-10">
+            <input   asp-for="Author" />
+            <span class="invalid" asp-validation-for="Author"></span>
+
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label" asp-for="ReleaseDate">发布时间</label>
+        <div class="col-sm-10">
+            <input   asp-for="ReleaseDate" />
+            <span class="invalid" asp-validation-for="ReleaseDate"></span>
+
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label" asp-for="CoverUrl">作品地址</label>
+        <div class="col-sm-10">
+            <input asp-for="CoverUrl" />
+            <span class="invalid" asp-validation-for="CoverUrl"></span>
+
+        </div>
+    </div>
+
+    <div class="invalid" asp-validation-summary="ModelOnly"></div>
+    <div class="form-group row">
+        <div class="col-sm-12">
+            <button class="btn btn-primary" type="submit">submit</button>
+            <a asp-action="Index" class="btn btn-secondary">return</a>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,45 @@
+﻿@model RegisterViewModel
+
+<form asp-action="Register" asp-controller="Example" method="post">
+    <h1 style=" margin-top: 5px; ">Register</h1>
+    <h4 style=" margin-top: 5px; margin-bottom:10px;">Create a new account</h4>
+    <div class="form-group row">
+        <label style="margin-top: 10px;  margin-bottom:5px;" asp-for="UserName">UserName</label>
+        <div class="col-sm-10">
+            <input style="font-size:25px; margin-bottom:10px;" asp-for="UserName" />
+        </div>
+            
+        <span asp-validation-for="UserName"></span>
+    </div>
+    <div class="form-group row">
+        <label style="margin-bottom:5px; " asp-for="Password">Password</label>
+        <div class="col-sm-10">
+            <input style="font-size:25px; margin-bottom:10px;" asp-for="Password" />
+        </div>
+            
+        <span style="font-size:25px; margin-top: 5px; margin-bottom:5px;" asp-validation-for="Password"></span>
+    </div>
+    <div class="form-group row">
+        <label style="  margin-bottom:5px;" asp-for="PhoneNumber">PhoneNumber</label>
+        <div class="col-sm-10">
+            <input style="font-size:25px;  margin-bottom:10px;" asp-for="PhoneNumber" />
+        </div>
+
+        <span style="font-size:25px; margin-top: 5px; margin-bottom:5px;" asp-validation-for="PhoneNumber"></span>
+    </div>
+    <div class="form-group row">
+        <label  style=" margin-bottom:5px;" asp-for="Email">Email</label>
+        <div class="col-sm-10">
+            <input style="font-size:25px; margin-bottom:10px;" asp-for="Email" />
+        </div>
+        <span style="font-size:25px; margin-top: 5px; margin-bottom:5px;" asp-validation-for="Email"></span>
+    </div>
+
+    <div  asp-validation-summary=All></div>
+    <div class="form-group row">
+        <div class="col-sm-12">
+            <input class="btn btn-primary" type="submit" value="Confirm registration" />
+        </div>
+    </div>
+    
+</form>

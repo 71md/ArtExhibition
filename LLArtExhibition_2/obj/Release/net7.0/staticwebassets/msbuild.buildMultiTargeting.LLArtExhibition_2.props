@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\LLArtExhibition_2.props" />
-</Project>
